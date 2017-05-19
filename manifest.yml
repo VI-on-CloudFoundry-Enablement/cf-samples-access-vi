@@ -1,0 +1,8 @@
+---
+applications:
+- name: cf-samples-java-spring-service
+  host: d043918trial-cf-samples-java-spring-service
+  path: target/cf-samples-java-spring-service.war
+  memory: 256M
+  instances: 1
+  
