@@ -2,8 +2,10 @@ package com.sap.vean.cf.samples.model;
 
 public class ResultData {
 
-	boolean success;
-	String message = "";
+	private boolean success;
+	private String message = "";
+	private Object resultobject;
+	
 	public boolean isSuccess() {
 		return success;
 	}
@@ -15,6 +17,12 @@ public class ResultData {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public Object getResultobject() {
+		return resultobject;
+	}
+	public void setResultobject(Object resultobject) {
+		this.resultobject = resultobject;
 	}
 	
 	

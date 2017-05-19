@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sap.vean</groupId>
-  <artifactId>cf-samples-java-spring-service</artifactId>
+  <artifactId>cf-samples-access-vi</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
   <name>CloudFoundry Samples - Spring Based Service</name>
@@ -35,13 +35,18 @@
            <artifactId>spring-boot-starter-data-rest</artifactId>
            <version>1.5.3.RELEASE</version>
        </dependency>
-	
+
+    <dependency>
+    	<groupId>com.sap.vean</groupId>
+    	<artifactId>vehicleinsights-devkit-cf-java</artifactId>
+    	<version>0.0.9</version>
+    </dependency>
   </dependencies>
   
   <build>
-    <finalName>cf-samples-java-spring-service</finalName>
+    <finalName>${artifactId}</finalName>
     <plugins>
-      <plugin>
+      <plugin> 
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
@@ -49,6 +54,7 @@
       <plugin>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-maven-plugin</artifactId>
+		<version>1.5.3.RELEASE</version>
 	   </plugin>
     </plugins>
   </build>
